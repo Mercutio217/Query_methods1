@@ -4,7 +4,8 @@ for i in range(100):
    for j in range (i, 100, i+1):
        doors[j] = not doors[j]
 
-print("The following doors are open: ", end=' ')
-for index, res in enumerate(doors):
-    if res == 1:
-       print(index + 1, end=", ")
+print("Opened doors:", end=' ')
+for x in range(len(doors)):
+    if doors[x] == 1:
+        x = x+1
+        print(x, end=",")
